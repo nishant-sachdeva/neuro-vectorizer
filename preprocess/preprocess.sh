@@ -14,8 +14,12 @@
 
 # Configuration is relative to this script
 SCRIPT_LOC=$(realpath "$0")
+echo $SCRIPT_LOC
 SCRIPT_PATH="$(dirname "$SCRIPT_LOC")"
+echo $SCRIPT_PATH
 . $SCRIPT_PATH/configure.sh
+
+echo "$SCRIPT_PATH/configure.sh"
 
 [ ! -d ${CODE2VEC_LOC} ] && echo "code2vec location does not exist!" && exit 1
 [ ! -d ${SOURCE_DIR} ] && echo "source directory does not exist!" && exit 1

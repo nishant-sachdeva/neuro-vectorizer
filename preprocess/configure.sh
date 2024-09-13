@@ -50,9 +50,9 @@
 
 # External dependencies
 # CLANG_PATH - should be set to the location of lib clang
-CLANG_PATH=/usr/lib/llvm-10/lib/libclang.so.1
+CLANG_PATH=/usr/lib/llvm-14/lib/libclang.so.1
 # CLANG_BIN_PATH should be set to the location of bin/clang
-CLANG_BIN_PATH=/usr/bin/clang-10
+CLANG_BIN_PATH=/usr/bin/clang-14
 # CODE2VEC_LOC - should be the location of base codevec
 CODE2VEC_LOC=../code2vec
 # SOURCE_DIR - top level folder for C source files
@@ -95,6 +95,8 @@ PYTHON=python3
 MAX_LEAF_NODES=320
 TEST_SHELL_COMMAND_TIMEOUT=50s
 
+CLANG_CINDEX_PATH=/home/nishant/neurovec/nvec/lib/python3.8/site-packages
+
 # Don't edit below this line
 CODE2VEC_LOC=$(realpath ${CODE2VEC_LOC})
 export CLANG_PATH=$(realpath ${CLANG_PATH})
@@ -104,3 +106,4 @@ export PYTHONPATH=$CODE2VEC_LOC:$PYTHONPATH
 export CLANG_BIN_PATH=$(realpath ${CLANG_BIN_PATH})
 export MAX_LEAF_NODES=${MAX_LEAF_NODES}
 export TEST_SHELL_COMMAND_TIMEOUT=${TEST_SHELL_COMMAND_TIMEOUT}
+export PYTHONPATH=$CLANG_CINDEX_PATH:$PYTHONPATH

@@ -50,9 +50,9 @@
 
 # External dependencies
 # CLANG_PATH - should be set to the location of lib clang
-CLANG_PATH=/usr/lib/llvm-6.0/lib/libclang.so.1
+CLANG_PATH=/usr/lib/llvm-10/lib/libclang.so.1
 # CLANG_BIN_PATH should be set to the location of bin/clang
-CLANG_BIN_PATH=/usr/bin/clang
+CLANG_BIN_PATH=/usr/bin/clang-10
 # CODE2VEC_LOC - should be the location of base codevec
 CODE2VEC_LOC=../code2vec
 # SOURCE_DIR - top level folder for C source files
@@ -89,7 +89,7 @@ MAX_CONTEXTS=200
 WORD_VOCAB_SIZE=1301136
 PATH_VOCAB_SIZE=911417
 TARGET_VOCAB_SIZE=261245
-NUM_THREADS=64
+NUM_THREADS=4
 PYTHON=python3
 
 MAX_LEAF_NODES=320

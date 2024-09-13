@@ -16,7 +16,7 @@ import hashlib
 
 # Generate a basic cmd array
 def generate_cmd(args):
-    command = ['python', './preprocess/cparser.py', "--clang-path", args.clang_path, "--max-leaves", args.max_leaves, "--no-hash-paths", "TRUE"]
+    command = ['python3', './preprocess/cparser.py', "--clang-path", args.clang_path, "--max-leaves", args.max_leaves, "--no-hash-paths", "TRUE"]
     if args.include_path is not None and len(args.include_path) > 0:
         command.extend(["--include-path", args.include_path])
     return command

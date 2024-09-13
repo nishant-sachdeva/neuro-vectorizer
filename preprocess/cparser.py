@@ -107,7 +107,7 @@ def append_include(path):
 def parse_single(file_path, include_dirs, index):
     # Generate random filename for in-memory file
     destname = file_path + format(random.randint(0,99999), '05d') + ".c"
-    cmd = ["clang"]
+    cmd = ["clang-14"]
     if include_dirs is not None:
         cmd.extend(["-I"+i for i in include_dirs])
     cmd.extend(["-E", file_path])

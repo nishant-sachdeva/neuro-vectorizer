@@ -76,6 +76,6 @@ ${PYTHON} ${CODE2VEC_LOC}/preprocess.py --train_data ${TRAIN_DATA_FILE} --test_d
     
 # This line can be uncommented if disk usage is of primary concern.  This will delete intermediary files which are 
 # redundant and sizeable.
-rm ${TRAIN_DATA_FILE} ${VAL_DATA_FILE} ${TEST_DATA_FILE} ${TARGET_HISTOGRAM_FILE} ${ORIGIN_HISTOGRAM_FILE} \
- ${PATH_HISTOGRAM_FILE} ${RAW_DATA_FILE} ${SORTED_DATA_FILE}
+# rm ${TRAIN_DATA_FILE} ${VAL_DATA_FILE} ${TEST_DATA_FILE} ${TARGET_HISTOGRAM_FILE} ${ORIGIN_HISTOGRAM_FILE} \
+#  ${PATH_HISTOGRAM_FILE} ${RAW_DATA_FILE} ${SORTED_DATA_FILE}
 

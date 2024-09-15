@@ -95,7 +95,7 @@ PYTHON=python3
 MAX_LEAF_NODES=320
 TEST_SHELL_COMMAND_TIMEOUT=50s
 
-CLANG_CINDEX_PATH=/home/intern23002/anaconda3/envs/neurovec/lib/python3.8/site-packages/
+CLANG_CINDEX_PATH=/home/intern23002/anaconda3/envs/NVec/lib/python3.8/site-packages/
 PYTHON_PACKAGES_PATH=/home/intern23002/.local/lib/python3.8/site-packages
 
 # Don't edit below this line

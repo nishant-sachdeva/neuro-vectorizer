@@ -181,6 +181,7 @@ class NeuroVectorizerEnv(gym.Env):
         else:
             # can't calculate the reward without compile/runtime.
             reward = 0
+            logger.info(" Reward : 0")
       
         return reward
 

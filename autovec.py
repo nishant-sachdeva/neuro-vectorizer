@@ -41,7 +41,7 @@ tune.run("PPO",
         #restore = "~/ray_results/PPO_*/checkpoint_240/checkpoint-240",
         checkpoint_freq  = 1,
         name = "neurovectorizer_train",
-        stop = {"episodes_total": 100000},
+        stop = {"episodes_total": 1000000},
         config={
             "sample_batch_size": 25,
             "train_batch_size": 500,

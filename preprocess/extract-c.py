@@ -22,7 +22,6 @@ import shutil
 import subprocess
 import gzip, io
 from threading import Timer
-import sys
 from pathlib import Path
 from argparse import ArgumentParser
 from subprocess import Popen, PIPE, STDOUT, call
@@ -38,10 +37,6 @@ TMP_DIR = ""
 
 def ParallelExtractDir(args, dir):
     ExtractFeaturesForDir(args, dir, "")
-
-
-def background_function(file, stdout):
-    shutil.copyfileobj(stdout, file)
 
 # Generate a basic cmd array
 def generate_cmd(args):

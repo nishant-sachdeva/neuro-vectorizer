@@ -36,7 +36,18 @@ rm -rf $DATA_ROOT
 mkdir -p $DATA_ROOT
 
 echo "Extracting paths from data set..."
-${PYTHON} ${SCRIPT_PATH}/extract-c.py --dir ${SOURCE_DIR} -outdir ${DATA_ROOT} ${SKIP_DECLS} -maxleaves ${MAX_LEAVES} --num_threads ${NUM_THREADS} --clang-path ${CLANG_PATH} --include-path ${SOURCE_DIR} > ${RAW_DATA_FILE} 2>> ${DATA_ROOT}/stderr.txt
+${PYTHON} \
+  ${SCRIPT_PATH}/extract-c.py \
+  --dir ${SOURCE_DIR} \
+  -outdir ${DATA_ROOT} \
+  ${SKIP_DECLS} \
+  -maxleaves ${MAX_LEAVES} \
+  --num_threads ${NUM_THREADS} \
+  --clang-path ${CLANG_PATH} \
+  --include-path ${SOURCE_DIR} \
+  > ${RAW_DATA_FILE} \
+  2>> ${DATA_ROOT}/stderr.txt
+
 echo "Finished extracting paths from data set"
 sort -u -R -S ${MEM_PERCENT}% --parallel ${NUM_PROCESSORS} --output=${SORTED_DATA_FILE} ${RAW_DATA_FILE}
 
@@ -76,6 +87,6 @@ ${PYTHON} ${CODE2VEC_LOC}/preprocess.py --train_data ${TRAIN_DATA_FILE} --test_d
     
 # This line can be uncommented if disk usage is of primary concern.  This will delete intermediary files which are 
 # redundant and sizeable.
-# rm ${TRAIN_DATA_FILE} ${VAL_DATA_FILE} ${TEST_DATA_FILE} ${TARGET_HISTOGRAM_FILE} ${ORIGIN_HISTOGRAM_FILE} \
-#  ${PATH_HISTOGRAM_FILE} ${RAW_DATA_FILE} ${SORTED_DATA_FILE}
+rm ${TRAIN_DATA_FILE} ${VAL_DATA_FILE} ${TEST_DATA_FILE} ${TARGET_HISTOGRAM_FILE} ${ORIGIN_HISTOGRAM_FILE} \
+ ${PATH_HISTOGRAM_FILE} ${RAW_DATA_FILE} ${SORTED_DATA_FILE}
 
